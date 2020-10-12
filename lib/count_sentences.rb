@@ -22,16 +22,27 @@ class String
     array = self.split
     sentences = 0
     array.each do |evaluation|
-     #binding.pry
-      if evaluation.sentence? == true
-        sentences = sentences += 1
-      elsif evaluation.question? == true
-        sentences = sentences += 1
-      elsif evaluation.exclamation? == true
+      if evaluation.sentence? == true || evaluation.question? == true || evaluation.exclamation? == true
         sentences = sentences += 1
       end
     end
     return sentences
   end
+
+  # def count_sentences
+  #   array = self.split
+  #   sentences = 0
+  #   array.each do |evaluation|
+  #    #binding.pry
+  #     if evaluation.sentence? == true 
+  #       sentences = sentences += 1
+  #     elsif evaluation.question? == true
+  #       sentences = sentences += 1
+  #     elsif evaluation.exclamation? == true
+  #       sentences = sentences += 1
+  #     end
+  #   end
+  #   return sentences
+  # end
 
 end
